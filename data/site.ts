@@ -4,22 +4,66 @@
  */
 export const siteContent = {
   name: 'Evan Cillie',
-  eyebrow: 'Software engineer · Portfolio skeleton',
+
+  eyebrow:
+    'Software Engineer · Data Enthusiast · Aviation & Hockey',
+
   headlineStart: 'Building with',
-  headlineEmphasis: 'data, aviation,',
-  headlineEnd: 'and sports.',
+  headlineEmphasis: 'data, technology,',
+  headlineEnd: 'and curiosity.',
+
   shortBio:
-    'Short bio coming soon. Replace this with two or three sentences about who you are, what you build, and what you are interested in.',
-  aboutTitle: 'Bio headline goes here.',
+    'I am a software engineer with a passion for data, aviation, ' +
+    'and sports. I enjoy building practical tools and applications ' +
+    'that turn data into meaningful insights, improve efficiency, ' +
+    'and solve real-world problems.',
+
+  aboutTitle: 'About Evan Cillie.',
+
   aboutIntro:
-    'Add a concise introduction here. This should explain your background without repeating the full resume.',
+    'A curious and driven software engineer focused on continuous ' +
+    'learning, data-driven problem solving, and building efficient ' +
+    'technical solutions.',
+
   bioParagraphs: [
-    'Add a paragraph about education and your path into software engineering.',
-    'Add a paragraph about your current role, technical interests, and the kinds of problems you enjoy solving.',
-    'Add a paragraph about hockey, aviation, analytics, or anything else that gives the bio personality.',
+    'I began college studying history and political science, but ' +
+      'quickly realized that I missed the analytical thinking and ' +
+      'problem solving that came with mathematics. I began exploring ' +
+      'more quantitative and logic-based coursework, which ultimately ' +
+      'led me to computer science. Through programming, I discovered ' +
+      'a passion for breaking down complex problems, building solutions, ' +
+      'and continuously improving the way things work.',
+
+    'In my current role at LexisNexis Risk Solutions, I work on CI/CD ' +
+      'automation, software development lifecycle improvements, and ' +
+      'internal AI-powered tools. This work brings together two areas ' +
+      'that strongly motivate me: improving efficiency through technology ' +
+      'and continuously learning new tools, systems, and approaches.',
+
+    'Outside of work, hockey and aviation are two of my biggest interests. ' +
+      'I have played ice hockey since I was six years old and remain deeply ' +
+      'interested in both the game and the data behind it. Working with ' +
+      'hockey analytics has allowed me to stay involved in the sport while ' +
+      'continuing to develop my technical skills. I have taken a similar ' +
+      'approach to aviation, exploring industry data through personal ' +
+      'projects and economic research.',
   ],
-  interests: ['Software engineering', 'Data & analytics', 'Aviation', 'Hockey'],
-  currentTitle: 'Current focus',
+
+  interests: [
+    'Software Engineering',
+    'Data & Analytics',
+    'Aviation',
+    'Hockey',
+  ],
+
+  currentTitle: 'Current Focus',
+
   currentText:
-    'Add a short update about what you are working on, learning, or looking for right now.',
+    'I currently work as a Software Engineer in the Insurance vertical ' +
+    'at LexisNexis Risk Solutions through the Technology Accelerate ' +
+    'Graduate Program. My current work focuses on improving automation, ' +
+    'incorporating AI into release management and software development ' +
+    'workflows, and strengthening the overall development lifecycle. ' +
+    'Outside of work, I continue to build personal projects centered on ' +
+    'data analytics, aviation, and software development.',
 };
