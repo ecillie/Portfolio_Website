@@ -1,6 +1,6 @@
 # Portfolio Website
 
-Evan Cillie’s personal portfolio, built with React, TypeScript, Vite/Vinext, and Tailwind CSS.
+Evan Cillie’s personal portfolio, built with React, TypeScript, Vite, React Router, and Tailwind CSS.
 
 ## Local development
 
@@ -9,7 +9,11 @@ npm install
 npm run dev
 ```
 
-Open `http://localhost:3000`.
+Open the local URL printed by Vite (normally `http://localhost:5173`).
+
+## Vercel
+
+Use the Vite framework preset, `npm run build`, and the `dist` output directory. `vercel.json` rewrites direct page requests to the single-page app.
 
 ## Content updates
 
