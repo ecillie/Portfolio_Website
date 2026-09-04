@@ -5,7 +5,7 @@
 export const resumes = [
   {
     name: 'Evan Cillie',
-    label: 'Software Engineering Resume',
-    filename: 'Evan-Cillie-Resume.pdf',
+    label: 'Aviation Resume',
+    filename: 'Evan_Cillie_Aviation_Resume.pdf',
   },
 ];
