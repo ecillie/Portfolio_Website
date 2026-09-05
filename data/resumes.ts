@@ -6,7 +6,7 @@ export const resumes = [
   
   { name: 'Evan Cillie',
     label: 'General Resume',
-    filename: 'Evan-Cillie-Resume.pdf',
+    filename: 'Evan_Cillie_Resume.pdf',
   }
   ,
   {
