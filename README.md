@@ -20,10 +20,10 @@ Use the Vite framework preset, `npm run build`, and the `dist` output directory.
 See `CONTENT_GUIDE.md`. The short version:
 
 - Homepage and bio copy live in `data/site.ts`.
-- The four project records live in `data/projects.ts`.
+- Profile links and grouped skills also live in `data/site.ts`.
+- Featured project and case-study records live in `data/projects.ts`.
 - Resume entries live in `data/resumes.ts`; PDF files go in `public/resumes/`.
-- Experience entries live in `data/experience.ts`.
-- Set `NEXT_PUBLIC_SITE_URL` to the final production origin for absolute social metadata URLs.
+- Experience entries, accomplishment bullets, and supporting tools live in `data/experience.ts`.
 
 ## Checks
 
