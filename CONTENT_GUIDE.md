@@ -27,7 +27,7 @@ For smaller work that should not have a detail page, add entries to `otherProjec
 
 1. Copy a PDF into `public/resumes/`.
 2. Add an entry with the exact filename to `data/resumes.ts`.
-3. The Resume tab automatically adds a download link and previews the first available PDF.
+3. The Resume tab automatically adds a selectable preview and download link for each PDF.
 
 ## Prompt for another LLM
 

@@ -1,4 +1,4 @@
-import { useEffect, type ReactNode } from 'react';
+import { useEffect, useState, type ReactNode } from 'react';
 import { Link, Navigate, Route, Routes, useLocation, useParams } from 'react-router-dom';
 import { experience } from '@/data/experience';
 import { otherProjects, projects, type Project } from '@/data/projects';
@@ -129,11 +129,12 @@ function ExperiencePage() {
 }
 
 function ResumePage() {
-  const preview = resumes[0];
+  const [selectedFilename, setSelectedFilename] = useState(resumes[0]?.filename);
+  const preview = resumes.find((resume) => resume.filename === selectedFilename) ?? resumes[0];
   return (
     <PageFrame>
       <PageIntro kicker="Resumes" title="Resume library."><p>Download the resume that best matches the opportunity or preview it directly below.</p></PageIntro>
-      <section className="resume-panel shell"><div className="resume-toolbar resume-library"><div><span className="status-dot" /><strong>Resume files available</strong><p>{resumes.length} PDF file{resumes.length === 1 ? '' : 's'}</p></div><nav aria-label="Resume downloads">{resumes.map((resume) => <a className="button button-dark" href={`/resumes/${resume.filename}`} download key={resume.filename}>{resume.label} ↓</a>)}</nav></div>{preview && <iframe className="resume-frame" src={`/resumes/${preview.filename}`} title={`${preview.name} — ${preview.label}`} />}</section>
+      <section className="resume-panel shell"><div className="resume-toolbar resume-library"><div><span className="status-dot" /><strong>Resume files available</strong><p>{resumes.length} PDF file{resumes.length === 1 ? '' : 's'}</p></div><nav className="resume-options" aria-label="Choose a resume to preview">{resumes.map((resume) => <div className="resume-option" key={resume.filename}><button className={`button resume-select ${preview?.filename === resume.filename ? 'is-selected' : ''}`} type="button" aria-pressed={preview?.filename === resume.filename} onClick={() => setSelectedFilename(resume.filename)}>{resume.label}<span aria-hidden="true">↗</span></button><a className="resume-download" href={`/resumes/${resume.filename}`} download aria-label={`Download ${resume.label}`}>↓</a></div>)}</nav></div>{preview && <iframe className="resume-frame" src={`/resumes/${preview.filename}`} title={`${preview.name} — ${preview.label}`} />}</section>
     </PageFrame>
   );
 }
@@ -141,7 +142,7 @@ function ResumePage() {
 function ContactPage() {
   const links = [{ label: 'LinkedIn', value: 'in/evan-cillie', href: 'https://www.linkedin.com/in/evan-cillie' }, { label: 'GitHub', value: '@ecillie', href: 'https://github.com/ecillie' }];
   return (
-    <PageFrame><PageIntro kicker="Contact" title="Good ideas start with a conversation."><p>Have a project, an interesting problem, or want to compare notes on software, aviation, analytics, or hockey? I&apos;d be glad to connect.</p></PageIntro><section className="contact-layout shell"><div className="contact-card"><p className="kicker">Find me online</p>{links.map((link) => <a href={link.href} key={link.label} target="_blank" rel="noreferrer"><span>{link.label}</span><strong>{link.value}</strong><i>↗</i></a>)}</div><div className="contact-note"><span className="big-dot" /><h2>Open to thoughtful conversations and ambitious work.</h2><p>LinkedIn is the best place to reach me. I usually reply within a few days.</p></div></section></PageFrame>
+    <PageFrame><PageIntro kicker="Contact" title="Good ideas start with a conversation."><p>Have a project, an interesting problem, or want to compare notes on software, aviation, analytics, or hockey? I&apos;d be glad to connect.</p></PageIntro><section className="contact-layout shell"><div className="contact-card"><p className="kicker">Find me online</p>{links.map((link) => <a href={link.href} key={link.label} target="_blank" rel="noreferrer"><span>{link.label}</span><strong>{link.value}</strong><i>↗</i></a>)}</div><div className="contact-note"><span className="big-dot" /><h2>Open to thoughtful conversations and ambitious work.</h2><p>LinkedIn is the best place to reach me. I will normally respond within 24 hours!</p></div></section></PageFrame>
   );
 }
 

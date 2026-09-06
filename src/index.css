@@ -172,7 +172,12 @@ a.other-project-card:hover { background: rgba(255,255,255,.55); }
 
 .resume-panel { padding: 60px 0 120px; }.resume-toolbar { display: flex; justify-content: space-between; align-items: center; padding: 22px 24px; background: white; border: 1px solid var(--line); }
 .resume-toolbar > div { display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 4px 12px; }.resume-toolbar .status-dot { grid-row: 1 / 3; }.resume-toolbar p { margin: 0; color: #777a71; font-size: .7rem; }
-.resume-library > nav { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 10px; }
+.resume-options { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 10px; }
+.resume-option { display: flex; align-items: stretch; }
+.resume-select { border: 1px solid var(--ink); cursor: pointer; font: inherit; }
+.resume-select.is-selected { background: var(--acid); color: var(--ink); }
+.resume-download { display: grid; place-items: center; width: 42px; border: 1px solid var(--ink); border-left: 0; background: white; font-size: 1rem; transition: background .2s, transform .2s; }
+.resume-download:hover { background: var(--blue); transform: translateY(-2px); }
 .resume-frame { width: 100%; height: 900px; border: 1px solid var(--line); border-top: 0; background: #ddd; }
 .resume-placeholder { min-height: 560px; padding: 80px 24px; display: grid; place-items: center; align-content: center; text-align: center; border: 1px dashed rgba(23,25,20,.3); border-top: 0; background: rgba(255,255,255,.35); }
 .resume-placeholder > span { width: 80px; height: 100px; display: grid; place-items: center; margin-bottom: 25px; background: var(--acid); font: 700 .75rem var(--font-geist-mono); box-shadow: 10px 10px 0 var(--blue); }
@@ -208,7 +213,7 @@ a.other-project-card:hover { background: rgba(255,255,255,.55); }
   .other-projects .section-heading { align-items: start; }.other-project-grid { grid-template-columns: 1fr; }
   .case-next { align-items: flex-start; flex-direction: column; gap: 20px; }
   .timeline-item { grid-template-columns: 40px 1fr; }.timeline-period { grid-column: 2; grid-row: 1; }.timeline-item > div { grid-column: 2; }.principles > div { grid-template-columns: 1fr; }.principles article { min-height: 140px; }.principles h3 { margin-top: 58px; }
-  .resume-toolbar { align-items: start; flex-direction: column; gap: 22px; }.resume-library > nav { justify-content: flex-start; }.resume-frame { height: 600px; }.contact-note { min-height: 360px; padding: 28px; }
+  .resume-toolbar { align-items: start; flex-direction: column; gap: 22px; }.resume-options { justify-content: flex-start; }.resume-frame { height: 600px; }.contact-note { min-height: 360px; padding: 28px; }
 }
 
 @media (max-width: 480px) {
@@ -228,7 +233,7 @@ a.other-project-card:hover { background: rgba(255,255,255,.55); }
   .case-chart { inset-inline: 7%; gap: 10px; }.case-visual { height: 270px; }
   .case-body { padding: 60px 0; }.case-next a { font-size: 1.8rem; }
   .contact-card a { grid-template-columns: 80px minmax(0, 1fr) auto; gap: 12px; }.contact-card a strong { font-size: .9rem; overflow-wrap: anywhere; }
-  .resume-placeholder { min-height: 430px; padding-inline: 18px; }.resume-library > nav, .resume-library .button { width: 100%; }
+  .resume-placeholder { min-height: 430px; padding-inline: 18px; }.resume-options, .resume-option, .resume-select { width: 100%; }.resume-option .resume-download { width: 46px; flex: 0 0 46px; }
   .site-footer { align-items: flex-start; flex-direction: column; gap: 14px; }.site-footer p { margin: 0; }.site-footer div { flex-wrap: wrap; }
 }
 

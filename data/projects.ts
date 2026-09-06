@@ -197,27 +197,27 @@ export const otherProjects: OtherProject[] = [
   {
     title: 'CSC Capstone Project',
     description: 'Looked at human group classifciation from a robots perspective to better navigate a social setting.',
-    status: 'Add current status',
+    status: 'Finished as of 6/10/26',
     technologies: [],
   },
   {
     title: 'Robot Jump Roap',
     description: 'Programed a turtlebot using ROS2 to play jump roap with a laser and speed up or slow down to get human out.',
-    status: 'Add current status',
+    status: 'Finished as of 6/07/26',
     technologies: [],
   },
 
   {
     title: 'NHL Contract Year',
     description: 'Led and conducted study to see if players outperform carrer performance in final year of contract.',
-    status: 'Add current status',
+    status: 'Finished as of 6/08/25',
     technologies: [],
   },
 
   {
     title: 'Aviation Market Consolidation Study',
     description: 'Led and conducted study to look at market consolidation within the aviation industry.',
-    status: 'Add current status',
+    status: 'Finished as of 3/10/26',
     technologies: [],
   },
 
